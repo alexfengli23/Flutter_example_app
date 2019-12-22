@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import '../model/product.dart';
 import '../services/product.dart';
 import 'home_banner.dart';
+import 'home_product_page.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -33,12 +34,7 @@ class HomePageState extends State<HomePage> {
         body: ListView(
       children: <Widget>[
         BannerWidget(),
-        RaisedButton(
-          child: Text('获取产品数据'),
-          onPressed: () {
-            getProductResult();
-          },
-        )
+        HomeProductPage(listData),
       ],
     ));
   }
